@@ -1,0 +1,22 @@
+{
+  "name": "next14_admin",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "mongoose": "^8.0.1",
+    "next": "14.0.2",
+    "next-auth": "^5.0.0-beta.3",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-icons": "^4.12.0",
+    "recharts": "^2.10.1",
+    "use-debounce": "^10.0.0"
+  }
+}
