@@ -14,7 +14,7 @@ const LoginForm = () => {
   const [error, formAction] = useFormState(authenticate,null)
   
   return (    
-    <form action={formAction} className={styles.form}  >    {/* login Api req using formAction of useFormState */}
+    <form action={formAction} className={styles.form} >    {/* login Api req using formAction of useFormState */}
       <h1>Login</h1>
       <input type="text" placeholder="username" name="username" required/>
       <input type="password" placeholder="password" name="password" autoComplete="new-password" required/>
