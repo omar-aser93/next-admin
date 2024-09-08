@@ -12,15 +12,15 @@ const login = async (credentials) => {
   try {
     connectToDB();               //connect DB function
     const user = await User.findOne({ username: credentials.username });   //find the user by the name we recieved
-    if (!user || !user.isAdmin) throw new Error("Wrong credentials!");     //user not exist or not admin => error
+    if (!user || !user.isAdmin) return "Wrong credentials!";     //user not exist or not admin => error
     //un-hash the password & compare with the recieved password
     const isPasswordCorrect = await bcrypt.compare(credentials.password,user.password); 
-    if (!isPasswordCorrect) throw new Error("Wrong credentials!");        //if passwords not matched => error 
+    if (!isPasswordCorrect) return "Wrong credentials!";        //if passwords not matched => error 
  
     return user;                //Default : if everything is correct return the user
   } catch (err) {
     console.log(err);          //log the errors
-    throw new Error("Failed to login!");
+    return "Failed to login!";
   }
 };
 
