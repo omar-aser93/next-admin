@@ -9,11 +9,15 @@ const nextConfig = {
       },
     ];
   },
-  images: {                                  //allows cloudinary as 3rd party
+  images: {                                  //allows images 3rd party uploads
     remotePatterns: [
       {
         protocol: "https",
         hostname: "res.cloudinary.com",
+      },
+      {
+        protocol: "https",
+        hostname: "utfs.io",
       },
     ],
   },
